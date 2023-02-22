@@ -1,0 +1,6 @@
+toml==0.10.2
+eyed3==0.9.7
+pyrogram==2.0.97
+tgcrypto==1.2.5
+loguru==0.6.0
+tqdm==4.64.1

@@ -1,0 +1,36 @@
+[pyrogram]
+# 'api_id' and 'api_hash' should be retrieved as explained here:
+# https://docs.pyrogram.org/intro/quickstart#get-pyrogram-real-fast
+api_id = 12345 # replace with your own
+api_hash = "" # replace with your own
+
+[bot_account]
+name = "tracks-uploader-bot" # use wahtever name you want, just make sure it's not the same name used in 'user_account'
+bot_token = "your bot's token" # the bot that will send the messages
+
+[telegram]
+chat_id = -1001826751608 # target channel/chat id
+
+[tracks]
+path = "tracks/" # path of the directory with all the tracks
+allowed_extensions = [
+    # the leading dot is important
+    # MUST be lowercase
+    ".mp3",
+    ".m4a",
+    ".wav", # desktop: audio; android: file
+    ".ogg", # desktop: audio; android: audio
+    ".wma", # desktop: file; android: file
+]
+remove_first_n_directories_from_path = 5 # skip the first n path parts when sending the directory path message
+remove_first_n_directories_from_path_artist = 6 # the remaining path parts will be used as "artist" when the id3 tag is missing
+message_pinning_cooldown = 30 # how much to sleep after pinning a message. rate limits are very tight for this method
+default_thumbnail_path = "" # path of the thumbnail to use if the id3 tag is empty, leave empty to disable
+
+[script_fix_text_messages]
+# this script needs an user account
+name = "tracks-uploader-user"
+phone_number = "+39 333 444 5555" # the account's phone number
+
+[script_metadata_to_json]
+include_base64_artwork_string = false # whether to include the base64 string containing the track's artworks or not

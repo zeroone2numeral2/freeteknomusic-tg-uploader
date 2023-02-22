@@ -1,0 +1,11 @@
+.idea/
+idea/
+venv/
+*.mp3
+*.m4a
+config.toml
+*.log
+*.session
+*.session-journal
+thumb.jpg
+*.json
